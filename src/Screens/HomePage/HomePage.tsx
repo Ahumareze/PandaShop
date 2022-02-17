@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { Header } from '../../Components';
 import Collections from './components/Collections';
 import Item from './components/Item';
+import NavBar from '../../Components/NavBar/NavBar';
 
 function HomePage(props: any) {
 
@@ -15,7 +16,10 @@ function HomePage(props: any) {
             <section>
                 <Collections />
                 <Item />
+                <Item />
+                <Item />
             </section>
+            <NavBar />
         </div>
     );
 }

@@ -7,6 +7,8 @@
 section{
     height: 80vh;
     width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 .Collections{
     width: 100%;
@@ -61,5 +63,33 @@ section{
     margin-top: 10px;
 }
 .Home_Item{
-    height: 200px;
+    height: 350px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    background-color: #f5da91a4;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+}
+.Home_Item_title{
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(3.12deg, rgba(43, 43, 43, 0.46) -2.66%, rgba(21, 21, 21, 0.21) 27.57%, rgba(0, 0, 0, 0) 97.42%);
+    display: grid;
+    align-items: center;
+}
+.Home_Item_title p{
+    color: #fff;
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 0;
+    padding-left: 15px;
 }
