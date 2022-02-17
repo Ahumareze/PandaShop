@@ -1,47 +1,31 @@
 import React, {FC, useState} from 'react';
 import './Header.css';
 
+import {FiShoppingBag, FiMenu, FiSearch} from 'react-icons/fi'
+
 interface HeaderProps {
-    home: boolean,
-    userName: string,
-    logout: () => void,
-    navigate: (e: string) => void,
+
 }
 
-const Header: FC<HeaderProps> = ({navigate, home, logout, userName}): JSX.Element => {
-    const [showModal, setShowModal] = useState(false);
-
-    const onClick = () => {
-        setShowModal(prev => !prev)
-    }
+const Header: FC<HeaderProps> = ({}): JSX.Element => {
 
     return (
-        <>
-            <div className='Header'>
-                <p className='Logo'>Panda<span>Pay</span></p>
-                <div className='HeaderContainer'>
-                    <div className="HeaderButtons">
-                        <p className= {home ? 'ActivePage' : 'UnactivePage'} onClick={() =>  navigate('/home')} >Overview</p>
-                        <p className={!home ? 'ActivePage' : 'UnactivePage'} onClick={() =>  navigate('/transaction')}>Transfer</p>
-                        <p className='LogoutButton' onClick={() =>  onClick()} >{userName}</p>
+        <div className='Header'>
+            <div className='Hamburger_container'>
+                <FiMenu size={35} />
+            </div>
+            <div className='Header_search_container'>
+                <div className="main_input_container">
+                    <div className="search_icon">
+                        <FiSearch size={24} opacity={0.5} />
                     </div>
+                    <input placeholder='Search products' />
                 </div>
             </div>
-            {showModal && <div className='Modal'>
-                <div className='ModalContainer'>
-                    <p className='ModalTitle'>Logout of account</p>
-                    <p className="ModalDetails">Are you sure you want to logout of your Pandapay account</p>
-                    <div className='ModalBottom'>
-                        <div className='ModalCancleButton' onClick={() => onClick() } >
-                            <p>Cancle</p>
-                        </div>
-                        <div className='ModallogoutButton' onClick={() => logout() } >
-                            <p>Logout</p>
-                        </div>
-                    </div>
-                </div>
-            </div>}
-        </>
+            <div className='Header_shoppingbag_container'>
+                <FiShoppingBag size={35} color='#F3D175' />
+            </div>
+        </div>
     );
 }
 

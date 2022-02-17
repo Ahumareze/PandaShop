@@ -149,8 +149,7 @@ function TransactionPage(props: any) {
 
     return (
         <div className='TransactionPage'>
-            <Header home={false} navigate={(e) => navigate(e)} logout={() => props.logout()} userName={props.userData ? props.userData.username : '' } />
-            {props.loading ? <Loader /> :  view}
+            
         </div>
     );
 }
