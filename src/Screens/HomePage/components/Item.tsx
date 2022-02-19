@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import img from '../../../Assets/Images/img1.jpg';
+interface ItemProps {
+    img: any,
+    title: string,
+    onSelect: (e: string) => void
+}
 
-function Item() {
+const Item:FC<ItemProps> = ({img, title, onSelect}):JSX.Element => {
     return (
-        <div className='Home_Item' style={{backgroundImage: `url(${img})`, width: window.innerWidth - 30}}  >
+        <div className='Home_Item' style={{backgroundImage: `url(${img})`, width: window.innerWidth - 30}} onClick={() => onSelect(title)}  >
             <div className='Home_Item_title'>
-                <p>New Arrivials</p>
+                <p>{title}</p>
             </div>
         </div>
     );

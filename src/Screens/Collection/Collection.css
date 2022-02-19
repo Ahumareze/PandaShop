@@ -1,0 +1,22 @@
+.CollectionsPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+section{
+    height: 90vh;
+    width: 100vw;
+}
+.pageTitle{
+    font-size: 21px;
+    font-family: sans-serif;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.pageTitleLine{
+    height: 3px;
+    width: 70px;
+    border-radius: 2px;
+    background-color: #EB96A1;
+    margin-left: 15px;
+}

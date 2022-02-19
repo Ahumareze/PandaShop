@@ -1,10 +1,10 @@
 ///// Imported pages /////
 import LandingPage from "./LandingPage/LandingPage";
 import HomePage from "./HomePage/HomePage";
-import TransactionPage from "./TransactionPage.tsx/TransactionPage";
+import Collection from "./Collection/Collection";
 
 export {
     LandingPage,
     HomePage,
-    TransactionPage
+    Collection
 }
