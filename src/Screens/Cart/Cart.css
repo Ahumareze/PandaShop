@@ -1,0 +1,74 @@
+.CartPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    overflow: hidden;
+}
+.CartHeader{
+    height: 10vh;
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px ;
+}
+.CartBox{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+}
+.CartBox p{
+    margin: 0;
+    font-size: 20px;
+    color: #B786D9;
+    padding-right: 15px;
+}
+.CartTitle{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.CartTitle p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+.cb2{
+    justify-content: flex-end;
+}
+.CartPage section{
+    height: 90vh;
+    width: 100%;
+}
+.CartItem{
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+}
+.CartItemImg{
+    height: 100px;
+    width: 70px;
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.CartDetails{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.CartDetailsTitle{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding-left: 10px; 
+    margin-top: 5px;
+}

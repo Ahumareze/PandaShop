@@ -5,7 +5,7 @@ import * as actions from '../../Redux/actions';
 
 //Imported packeges
 import { connect } from 'react-redux';
-import { Header } from '../../Components';
+import { Header, SideDrawer } from '../../Components';
 import Collections from './components/Collections';
 import Item from './components/Item';
 import NavBar from '../../Components/NavBar/NavBar';
@@ -23,15 +23,18 @@ function HomePage(props: any) {
     }
 
     return (
-        <div className='HomePage'>
-            <Header />
-            <section>
-                <Collections />
-                <Item img={img1} title='New Arrivials' onSelect={(e) => onSelect(e)} />
-                <Item img={img2} title='Hottest' onSelect={(e) => onSelect(e)} />
-                <Item img={img3} title='Flash Sale' onSelect={(e) => onSelect(e)} />
-            </section>
-        </div>
+        <>
+            <div className='HomePage'>
+                <Header props={props} />
+                <section>
+                    <Collections />
+                    <Item img={img1} title='New Arrivials' onSelect={(e) => onSelect(e)} />
+                    <Item img={img2} title='Hottest' onSelect={(e) => onSelect(e)} />
+                    <Item img={img3} title='Flash Sale' onSelect={(e) => onSelect(e)} />
+                </section>
+            </div>
+            {/* <SideDrawer /> */}
+        </>
     );
 }
 
