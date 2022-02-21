@@ -1,8 +1,7 @@
 import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 
-function CartHeader(props: any) {
-
+function CheckoutHeader(props: any) {
     const navigate = () => {
         props.props.history.push('/')
     }
@@ -11,7 +10,6 @@ function CartHeader(props: any) {
         <div className='CartHeader' >
             <div className='CartBox' onClick={() => navigate()} >
                 <FiChevronLeft size={30} color='#B786D9' style={{paddingLeft: 5}} />
-                <p>Cart</p>
             </div>
             <div className='CartTitle'>
                 <p>Cart</p>
@@ -23,4 +21,4 @@ function CartHeader(props: any) {
     );
 }
 
-export default CartHeader;
+export default CheckoutHeader;

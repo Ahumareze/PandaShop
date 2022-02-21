@@ -1,12 +1,12 @@
 ///// Imported pages /////
-import LandingPage from "./LandingPage/LandingPage";
 import HomePage from "./HomePage/HomePage";
 import Collection from "./Collection/Collection";
 import Cart from "./Cart/Cart";
+import Checkout from "./Checkout/Checkout";
 
 export {
-    LandingPage,
     HomePage,
     Collection,
-    Cart
+    Cart,
+    Checkout
 }

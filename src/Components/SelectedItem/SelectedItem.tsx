@@ -3,18 +3,43 @@ import './SelectedItem.css';
 
 import img from '../../Assets/Images/img2.jpg'
 import SizeSelector from './SizeSelector';
-import { FiChevronLeft } from 'react-icons/fi';
+import { FiChevronLeft, FiShoppingBag } from 'react-icons/fi';
+import { RiCheckboxCircleLine } from 'react-icons/ri';
 
 interface SelectedItemProps {
     data: any,
-    back: () => void
+    cart: any,
+    back: () => void,
+    setCart: (e: any) => void
 }
 
-const SelectedItem:FC<SelectedItemProps> = ({data, back}):JSX.Element => {
+const SelectedItem:FC<SelectedItemProps> = ({data, back, cart, setCart}):JSX.Element => {
+    const [size, setSize] = useState('~');
+    const [alert, setAlert] = useState(false);
+    const [itemData, setItemData] = useState(data);
 
-    const [size, setSize] = useState();
+    const addToCheckout = () => {
+        const itemData = {
+            ...data,
+            size: size
+        };
+        const newArr = [...cart, itemData];
+        setCart(newArr);
+        localStorage.setItem('@pandaShop', JSON.stringify(newArr));
+        setAlert(true);
+    }
+
+    const alertDiv = (
+        <div className='preCartAlertDiv' onClick={() => setAlert(false)} >
+            <div className='PreCartAlert'>
+                <RiCheckboxCircleLine size={40} color='#B786D9' />
+                <p>Item added to cart</p>
+            </div>
+        </div>
+    )
 
     return (
+        <>
         <div className='SelectedItemPage'>
             <div className='SelectedItemTop' style={{backgroundImage: `url(${data.img})`}} >
                 <div className='SelectedItemBack' onClick={() => back()} >
@@ -35,10 +60,15 @@ const SelectedItem:FC<SelectedItemProps> = ({data, back}):JSX.Element => {
                     <p className='ItemDescription'>Newely imported gucci shirt straight outta the carribean island.</p>
                 </div>
                 <div className='SelectedItemBottom' >
-                    <div className='AddToCartButton'></div>
+                    <div className='AddToCartButton' onClick={() => addToCheckout()} >
+                        <p>Add to Cart</p>
+                        <FiShoppingBag size={20} color='#fff' />
+                    </div>
                 </div>
             </div>
         </div>
+        {alert && alertDiv}
+        </>
     );
 }
 

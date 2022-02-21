@@ -1,5 +1,9 @@
+const INIT = 'INIT';
 const SETCOLLECTION = 'SETCOLLECTION';
+const SETCART = 'SETCART';
 
 export {
-    SETCOLLECTION
+    INIT,
+    SETCOLLECTION,
+    SETCART
 }

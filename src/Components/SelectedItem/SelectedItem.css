@@ -83,11 +83,21 @@
 .AddToCartButton{
     height: 60px;
     width: 170px;
-    background-color: blueviolet;
+    background-color: #B786D9;
     position: fixed;
     bottom: 0;
     right: 0;
     border-top-left-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.AddToCartButton p{
+    margin: 0;
+    color: #fff;
+    font-size: 17px;
+    padding-right: 10px;
 }
 .SelectedItemBack{
     height: 50px;
@@ -95,4 +105,32 @@
     display: grid;
     align-items: center;
     background: linear-gradient(3.12deg,rgba(0, 0, 0, 0) 97.42% , rgba(21, 21, 21, 0.21) 27.57%, rgba(43, 43, 43, 0.46) -2.66%);
+}
+.preCartAlertDiv{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.PreCartAlert{
+    padding: 20px 0;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    animation: swing 0.8s ease forwards;
+    text-align: center;
+}
+.PreCartAlert p{
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+    margin-top: 10px;
+}
+@keyframes swing {
+    0%{transform: translateY(100vh);}
+    100%{transform: translateY(0px);}
 }

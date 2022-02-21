@@ -25,7 +25,7 @@ function HomePage(props: any) {
     return (
         <>
             <div className='HomePage'>
-                <Header props={props} />
+                <Header prop={props} num={props.cart} />
                 <section>
                     <Collections />
                     <Item img={img1} title='New Arrivials' onSelect={(e) => onSelect(e)} />
@@ -40,7 +40,7 @@ function HomePage(props: any) {
 
 const mapStateToProps = (state: any) => {
     return{
-        
+        cart: state.cart
     }
 }
 
