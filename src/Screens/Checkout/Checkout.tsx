@@ -8,7 +8,7 @@ import CheckoutInput from './Components/CheckoutInput';
 const width = window.innerWidth;
 
 function Checkout(props: any) {
-    const [alert, setAlert] = useState(false);
+    // const [alert, setAlert] = useState(false);
 
     const view = (
         <div className='CheckoutAlertDiv'>
