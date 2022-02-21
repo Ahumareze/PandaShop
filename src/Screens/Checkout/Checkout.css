@@ -49,3 +49,8 @@
     outline: none;
     border: 1px solid #B786D9;
 }
+.PayOnDeliveryDiv{
+    height: 40px;
+    width: 100%;
+    border: 1px solid #000;
+}
