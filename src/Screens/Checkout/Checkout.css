@@ -83,7 +83,7 @@
 }
 .CheckoutAlert{
     padding: 20px 0;
-    width: 250px;
+    width: 300px;
     background-color: #fff;
     border-radius: 10px;
     animation: swing 0.5s ease forwards;
@@ -94,7 +94,41 @@
     100%{transform: translateY(0px);}
 }
 .AlertButtons{
-    height: 100px;
-    width: 100%;
-    border: 1px solid #000;
+    height: 45px;
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.confirmButton{
+    height: 45px;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 7px;
+    background-color: #B786D9;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.cancleButton{
+    background-color: #f3f3f3;
+    color: rgb(58, 58, 58);
+    height: 45px;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.PCD{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 20px;
 }

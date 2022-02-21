@@ -8,13 +8,16 @@ import CheckoutInput from './Components/CheckoutInput';
 const width = window.innerWidth;
 
 function Checkout(props: any) {
-    // const [alert, setAlert] = useState(false);
+    const [alert, setAlert] = useState(false);
 
     const view = (
         <div className='CheckoutAlertDiv'>
             <div className="CheckoutAlert">
-                <p>Please confirm delivery</p>
-                <div className='AlertButtons'></div>
+                <p className='PCD' >Please confirm delivery</p>
+                <div className='AlertButtons'>
+                    <button className='cancleButton' onClick={() => setAlert(false)} >Cancle</button>
+                    <button className='confirmButton'>Confirm</button>
+                </div>
             </div>
         </div>
     )
@@ -33,11 +36,11 @@ function Checkout(props: any) {
                             <p>Pay on delivery ($300) </p>  
                             <FiCheck size={20} color='salmon' />
                         </div>
-                        <button style={{width: width - 60}} >Request Delivery</button>
+                        <button style={{width: width - 60}} onClick={() => setAlert(true)} >Request Delivery</button>
                     </div>
                 </section>
             </div>
-            {view}
+            {alert && view}
         </>
     );
 }
