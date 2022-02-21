@@ -3,3 +3,29 @@
     width: 100vw;
     background-color: #fff;
 }
+.CheckoutPage section{
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.CheckoutForm{
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.CheckoutHeader{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    
+}
+.CheckoutInput{
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid #000; */
+}

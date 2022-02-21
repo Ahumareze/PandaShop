@@ -14,6 +14,7 @@ function Cart(props: any) {
     const view = (
         <>
             {props.cart.map((i: any, idx: any) => <Item img={i.img} nameTag={i.nameTag} price={i.price} size={i.size} key={idx} value={idx} /> )}
+            <div className='ProceedToCheckout' onClick={() => props.history.push('/checkout')} >Proceed to checkout</div>
         </>
     )
 
@@ -27,7 +28,6 @@ function Cart(props: any) {
             <CartHeader props={props} clear={() => clear()} />
             <section>
                 {props.cart.length !== 0 && view}
-                <div className='ProceedToCheckout'>Proceed to checkout</div>
             </section>
         </div>
     );
