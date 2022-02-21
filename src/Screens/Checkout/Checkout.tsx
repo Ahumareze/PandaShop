@@ -13,9 +13,9 @@ function Checkout(props: any) {
             <section>
                 <div className='CheckoutForm' style={{width: width - 30}}>
                     <p className='CheckoutHeader' >Details</p>
-                    <CheckoutInput />
-                    <CheckoutInput />
-                    <CheckoutInput />
+                    <CheckoutInput name='Name' />
+                    <CheckoutInput name='Phone number' />
+                    <CheckoutInput name='Delivery Address' />
                 </div>
             </section>
         </div>

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 const width = window.innerWidth
 
-function CheckoutInput() {
+interface InputProps{
+    name: string
+}
+
+const  CheckoutInput:FC<InputProps> = ({name}):JSX.Element =>  {
     return (
         <div className='CheckoutInput' style={{width: width - 60}} >
-            <p>Name</p>
+            <p>{name}</p>
             <input />
         </div>
     );
