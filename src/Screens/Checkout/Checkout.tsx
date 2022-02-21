@@ -14,6 +14,8 @@ function Checkout(props: any) {
                 <div className='CheckoutForm' style={{width: width - 30}}>
                     <p className='CheckoutHeader' >Details</p>
                     <CheckoutInput />
+                    <CheckoutInput />
+                    <CheckoutInput />
                 </div>
             </section>
         </div>

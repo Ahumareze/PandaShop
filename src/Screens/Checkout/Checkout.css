@@ -22,10 +22,26 @@
     font-size: 20px;
     font-weight: bold;
     padding: 15px;
+    padding-bottom: 20px;
     
 }
 .CheckoutInput{
-    height: 100px;
-    width: 100%;
-    /* border: 1px solid #000; */
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+.CheckoutInput p{
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.CheckoutInput input{
+    height: 45px;
+    width: 95%;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 7px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 3%;
 }
