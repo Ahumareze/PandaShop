@@ -16,6 +16,7 @@ function Checkout(props: any) {
                     <CheckoutInput name='Name' />
                     <CheckoutInput name='Phone number' />
                     <CheckoutInput name='Delivery Address' />
+                    <p>Pay on Delivery</p>
                 </div>
             </section>
         </div>
